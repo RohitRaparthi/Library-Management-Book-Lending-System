@@ -110,8 +110,8 @@ library-management-system/
 ## 1. Clone Repository
 
 ```bash
-git clone YOUR_GITHUB_REPO_LINK
-cd library-management-system
+git clone https://github.com/RohitRaparthi/Library-Management-Book-Lending-System
+cd Library-Management-Book-Lending-System
 ```
 
 ---
