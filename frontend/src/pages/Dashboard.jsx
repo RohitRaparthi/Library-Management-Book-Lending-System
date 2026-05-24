@@ -32,7 +32,7 @@ function Dashboard() {
     ) {
       fetchSummary();
     }
-  }, []);
+  }, [user?.role]);
 
   return (
     <>

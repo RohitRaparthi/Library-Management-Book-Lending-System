@@ -32,6 +32,18 @@ function BookCatalog() {
   };
 
   useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        const res = await API.get(
+          `/books?search=${search}`
+        );
+
+        setBooks(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     fetchBooks();
   }, [search]);
 
