@@ -1,0 +1,67 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Rohit",
+  "email": "rohit@test.com",
+  "password": "123456",
+  "role": "student"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@test.com",
+  "password": "password123"
+}
+
+###
+
+POST http://localhost:5000/api/books
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5NjE1NjEyLCJleHAiOjE3ODAyMjA0MTJ9.Y5-OAC5wn7u88S62PdEbuOEDzgeB4DfsVCzBuKRgTA4
+
+{
+  "title": "React Basics",
+  "author": "John Doe",
+  "category": "Programming",
+  "isbn": "12345",
+  "quantity": 10
+}
+
+###
+GET http://localhost:5000/api/books
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5NjE1NjEyLCJleHAiOjE3ODAyMjA0MTJ9.Y5-OAC5wn7u88S62PdEbuOEDzgeB4DfsVCzBuKRgTA4
+
+###
+GET http://localhost:5000/api/books?search=react
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5NjE1NjEyLCJleHAiOjE3ODAyMjA0MTJ9.Y5-OAC5wn7u88S62PdEbuOEDzgeB4DfsVCzBuKRgTA4
+
+###
+POST http://localhost:5000/api/issues
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5NjE1NjEyLCJleHAiOjE3ODAyMjA0MTJ9.Y5-OAC5wn7u88S62PdEbuOEDzgeB4DfsVCzBuKRgTA4
+
+{
+  "bookId": 1
+}
+
+###
+GET http://localhost:5000/api/issues/history
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5NjE1NjEyLCJleHAiOjE3ODAyMjA0MTJ9.Y5-OAC5wn7u88S62PdEbuOEDzgeB4DfsVCzBuKRgTA4
+
+###
+PUT http://localhost:5000/api/issues/1/return
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5NjE1NjEyLCJleHAiOjE3ODAyMjA0MTJ9.Y5-OAC5wn7u88S62PdEbuOEDzgeB4DfsVCzBuKRgTA4
+
+###
+GET http://localhost:5000/api/dashboard/summary
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzc5NjE1NjEyLCJleHAiOjE3ODAyMjA0MTJ9.Y5-OAC5wn7u88S62PdEbuOEDzgeB4DfsVCzBuKRgTA4
